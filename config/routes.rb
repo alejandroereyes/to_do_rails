@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   post '/todos', to: 'todo#create'
 
+  delete '/todos/:id', to: 'todo#destroy'
+
 
 
 
