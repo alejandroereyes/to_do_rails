@@ -4,6 +4,14 @@ class TodoController < ApplicationController
     render json: Todo.all, status: 200
   end # index
 
+  def create
+    if Todo.exists?(params[:id])
+      render json: {error: 'item at #{params[:id]} id already exists'}, status: 422
+    else
+      Todo.create(entry: params[:entry])
+    end
+  end
+
   def show
     begin
       render json: Todo.find(params[:id]), status: 200
