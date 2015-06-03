@@ -8,9 +8,10 @@
 
   * `http://localhost:3000/todos` will return all to-dos in the list.
   * `http://localhost:3000/todos/new` will return an empty to-do.
-  * `http://localhost:3000/todos/1 will return to-do at id 1.
+  * `http://localhost:3000/todos/1` will return to-do at id 1.
   * `http://localhost:3000/todos/8989898` will return appropriate error message when id not found.
-  * `
+  * Sending a `POST` verb & `http://localhost:3000/todos` with a params of `{ "body": "Finish Homework" }` will generate a new todo and return new todo.
+  * Sending a `DELETE` verb & `http://localhost:3000/todos/1` will delete the todo at id 1.
 
 
 Things you may want to cover:
