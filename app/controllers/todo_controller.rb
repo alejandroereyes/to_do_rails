@@ -8,6 +8,17 @@ class TodoController < ApplicationController
       render json: Todo.create(entry: params[:entry]), status: 200
   end # create
 
+  def update
+    begin
+      todo = Todo.find(params[:id])
+      todo.completed = params[:completed]
+      todo.save
+      render json: Todo.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => error
+      render json: {error: error.message}, status: 404
+    end
+  end
+
   def destroy
     if Todo.exists?(id: params[:id])
       Todo.delete(params[:id])
