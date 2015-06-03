@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   delete '/todos/:id', to: 'todo#destroy'
 
-
+  put '/todos/:id', to: 'todo#update'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
