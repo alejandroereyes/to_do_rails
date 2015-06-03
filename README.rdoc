@@ -12,7 +12,13 @@
   * `http://localhost:3000/todos/8989898` will return appropriate error message when id not found.
   * Sending a `POST` verb & `http://localhost:3000/todos` with a params of `{ "body": "Finish Homework" }` will generate a new todo and return new todo.
   * Sending a `DELETE` verb & `http://localhost:3000/todos/1` will delete the todo at id 1.
+  * Sending a `PUT` verb & `http://localhost:3000/todos/3` with a params of `{"completed": "true"}` will update todo and return updated todo.
 
+## How to run
+
+  * Clone this repo
+  * run `rails s` in the `to_do` folder
+  * run url command from above in your browser
 
 
 Things you may want to cover:
