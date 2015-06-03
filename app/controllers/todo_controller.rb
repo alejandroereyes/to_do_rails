@@ -9,6 +9,8 @@ class TodoController < ApplicationController
       render json: Todo.find(params[:id]), status: 200
     rescue ActiveRecord::RecordNotFound => error
       render json: {error: error.message}, status: 404
+    rescue StandardError => error
+      render json: {error: error.message}, status: 418
     end
   end
 

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get '/todos/:id', to: 'todo#show'
 
+  post '/todos/:id', to: 'todo#create'
+
 
 
 
