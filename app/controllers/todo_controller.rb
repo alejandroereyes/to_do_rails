@@ -5,8 +5,17 @@ class TodoController < ApplicationController
   end # index
 
   def create
-      render json: Todo.create(entry: params[:entry])
+      render json: Todo.create(entry: params[:entry]), status: 200
   end # create
+
+  def destroy
+    if Todo.exists?(id: params[:id])
+      Todo.delete(params[:id])
+      render json: {message: "Entry Deleted"}, status: 200
+    else
+      render json: {error: "Entry Not Found"}, status: 404
+    end
+  end
 
   def show
     begin
