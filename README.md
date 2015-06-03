@@ -21,14 +21,7 @@
   * run url command from above in your browser
 
 
-Things you may want to cover:
+## Details
 
 * Ruby version 2.2.0
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
