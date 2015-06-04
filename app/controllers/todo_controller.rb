@@ -11,9 +11,17 @@ class TodoController < ApplicationController
   def update
     begin
       todo = Todo.find(params[:id])
-      todo.completed = params[:completed]
-      todo.save
-      render json: Todo.find(params[:id])
+      if !(params.has_key?(:entry))
+        todo.completed = params[:completed]
+        todo.save
+        render json: Todo.find(params[:id]), status: 200
+      elsif params.has_key?(:entry)
+        puts "************* #{params.inspect} **********"
+        todo = Todo.find(params[:id])
+        todo.entry = params[:entry]
+        todo.save
+        render json: Todo.find(params[:id]), status: 200
+      end
     rescue ActiveRecord::RecordNotFound => error
       render json: {error: error.message}, status: 404
     end
