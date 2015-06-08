@@ -3,7 +3,8 @@
     <li>
     <p><%= entry.id %>
     <%= entry.entry %>
-    <%= entry.completed %>
+    <% status = entry.completed ? "Completed" : "Unfinished" %>
+    <%= status %>
     </p>
     </li>
     <% end %>

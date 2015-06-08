@@ -3,7 +3,9 @@
   <li>
     <p><%= todo.id %>
     <%= todo.entry %>
-    <%= todo.completed %>
+    <% status = todo.completed ? "Completed" : "Unfinished" %>
+    <%= status %>
     </p>
   </li>
 </ul>
+<footer>Powered by SomeGuy</footer>
