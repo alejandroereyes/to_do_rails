@@ -36,17 +36,21 @@ h2 {
     font-family: Helvetica;
   }
 
-  p {
-    font-family: Helvetica;
+p {
+  font-family: Helvetica;
 
-    span.entry {
-      margin-left: 20px;
-    }
-
-    span.status {
-      margin-left: 20px;
-    }
+  span.entry {
+    margin-left: 20px;
   }
+
+  span.status {
+    margin-left: 20px;
+  }
+}
+
+a {
+
+}
 
 footer {
   text-align: center;

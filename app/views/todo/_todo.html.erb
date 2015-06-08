@@ -5,6 +5,7 @@
     <span class= 'entry'><%= entry.entry %></span>
     <% status = entry.completed ? "Completed" : "Unfinished" %>
     <span class= 'status'><%= status %></span>
+    <%= link_to "view", controller: "todo", action: "show", id: entry.id %>
     </p>
     </li>
     <% end %>
