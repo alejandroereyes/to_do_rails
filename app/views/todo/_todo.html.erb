@@ -5,7 +5,12 @@
     <span class= 'entry'><%= entry.entry %></span>
     <% status = entry.completed ? "Completed" : "Unfinished" %>
     <span class= 'status'><%= status %></span>
+    <span class="view">
     <%= link_to "view", controller: "todo", action: "show", id: entry.id %>
+    </span>
+    <span class= "delete">
+    <%= button_to "delete", { action: "destroy", id: entry.id }, method: "delete" %>
+    </span>
     </p>
     </li>
     <% end %>

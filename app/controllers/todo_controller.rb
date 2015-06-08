@@ -29,7 +29,7 @@ class TodoController < ApplicationController
   def destroy
     if Todo.exists?(id: params[:id])
       Todo.delete(params[:id])
-      render json: {message: "Entry Deleted"}, status: 200
+      render 'index.html.erb', locals: { todo: Todo.all }
     else
       render json: {error: "Entry Not Found"}, status: 404
     end
