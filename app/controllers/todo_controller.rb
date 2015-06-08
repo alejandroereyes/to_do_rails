@@ -2,7 +2,6 @@ class TodoController < ApplicationController
 
   def index
     render 'index.html.erb', locals: { todo: Todo.all }
-    # render json: Todo.all, status: 200
   end # index
 
   def create
@@ -39,7 +38,6 @@ class TodoController < ApplicationController
   def show
     begin
       render 'show.html.erb', locals: { todo: Todo.find(params[:id]) }
-      # render json: Todo.find(params[:id]), status: 200
     rescue ActiveRecord::RecordNotFound => error
       render json: {error: error.message}, status: 404
     rescue StandardError => error
