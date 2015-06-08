@@ -2,12 +2,13 @@
   <%= render partial: 'search.html.erb' %>
 </header>
 <%= render partial: 'nav.html.erb' %>
+<h3>Id#</h3><h3>Entry</h3><h3>Status</h3>
 <ul>
   <li>
     <p><%= todo.id %>
-    <%= todo.entry %>
+    <span class="entry"><%= todo.entry %></span>
     <% status = todo.completed ? "Completed" : "Unfinished" %>
-    <%= status %>
+    <span class="status"><%= status %></span>
     </p>
   </li>
 </ul>

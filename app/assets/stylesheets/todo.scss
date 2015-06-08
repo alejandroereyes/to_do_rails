@@ -2,12 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background-color: #C2C3BE;
-}
-
+// Colors
 $header-color: #B5C9D4;
 $nav-color: #FD7E47;
+$body-background-color: #C2C3BE;
+
+body {
+  background-color: $body-background-color;
+}
 
 header {
   font-size: 30px;
@@ -24,12 +26,26 @@ nav {
   background-color: $nav-color;
 }
 
+h3 {
+  display: inline-block;
+  margin-left: 35px;
+  margin-right: 15px;
+}
+
 h2 {
     font-family: Helvetica;
   }
 
   p {
     font-family: Helvetica;
+
+    span.entry {
+      margin-left: 20px;
+    }
+
+    span.status {
+      margin-left: 20px;
+    }
   }
 
 footer {

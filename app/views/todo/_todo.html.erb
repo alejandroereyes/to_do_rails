@@ -1,10 +1,10 @@
 <ul>
   <% todo.each do |entry| %>
     <li>
-    <p><%= entry.id %>
-    <%= entry.entry %>
+    <p><strong><%= entry.id %></strong>
+    <span class= 'entry'><%= entry.entry %></span>
     <% status = entry.completed ? "Completed" : "Unfinished" %>
-    <%= status %>
+    <span class= 'status'><%= status %></span>
     </p>
     </li>
     <% end %>
