@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get '/todos/new', to: 'todo#new'
 
-  get '/todos/search', to: 'todo#show'
+  get '/todos/show', to: 'todo#show'
 
   get '/todos', to: 'todo#index'
 
