@@ -1,4 +1,5 @@
 <header>Todos List</header>
+<%= render partial: 'nav.html.erb' %>
 <h2>Current Todos: <%=todo.count%></h2>
 <%= render partial: 'todo', locals: { todo: todo} %>
 <footer>Powered by SomeGuy</footer>
