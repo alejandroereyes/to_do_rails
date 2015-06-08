@@ -1,7 +1,8 @@
 class TodoController < ApplicationController
 
   def index
-    render json: Todo.all, status: 200
+    render 'index.html.erb', locals: { todo: Todo.all }
+    # render json: Todo.all, status: 200
   end # index
 
   def create
@@ -16,7 +17,6 @@ class TodoController < ApplicationController
         todo.save
         render json: Todo.find(params[:id]), status: 200
       elsif params.has_key?(:entry)
-        puts "************* #{params.inspect} **********"
         todo = Todo.find(params[:id])
         todo.entry = params[:entry]
         todo.save

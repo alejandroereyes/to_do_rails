@@ -1,6 +1,7 @@
 # To-dos using Rails
 
   This app uses the Rails framework to take RESTful requests and send responces in JSON back to the client. The information being worked with are from a to-do list kept in a SQLite3 db.
+  This app has been updated to display in the browser using html.
 
 ## What kind of requests will the server take?
 

@@ -1,0 +1,10 @@
+<ul>
+  <% todo_to_partial.each do |entry| %>
+    <li>
+    <p><%= entry.id %>
+    <%= entry.entry %>
+    <%= entry.completed %>
+    </p>
+    </li>
+    <% end %>
+</ul>
