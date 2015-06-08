@@ -1,16 +1,29 @@
 // Place all the styles related to the Todo controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #C2C3BE;
+}
+
+$header-color: #B5C9D4;
+$nav-color: #FD7E47;
+
 header {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
   font-family: Helvetica;
+  height: 100px;
+  background-color: $header-color;
+}
 
+nav {
+  height: 20px;
+  background-color: $nav-color;
 }
 
 h2 {
-    text-align: center;
     font-family: Helvetica;
   }
 
