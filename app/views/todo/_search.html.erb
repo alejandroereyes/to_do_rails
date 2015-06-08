@@ -1,0 +1,5 @@
+<%= form_tag("http://localhost:3000/show", method: "get") do %>
+  <%= label_tag(:id, "Search by ID:") %>
+  <%= text_field_tag(:id) %>
+  <%= submit_tag("Search") %>
+<% end %>
