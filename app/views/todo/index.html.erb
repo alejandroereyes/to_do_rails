@@ -1,3 +1,4 @@
-<h1>Your Todos</h1>
+<header>Todos List</header>
 <h2>Current Todos: <%=todo.count%></h2>
-<%= render partial: 'todo', locals: { todo_to_partial: todo} %>
+<%= render partial: 'todo', locals: { todo: todo} %>
+<footer>Powered by SomeGuy</footer>

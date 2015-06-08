@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get '/todos', to: 'todo#index'
-
   get '/todos/new', to: 'todo#new'
 
   get '/todos/:id', to: 'todo#show'
+
+  get '/todos', to: 'todo#index'
 
   post '/todos', to: 'todo#create'
 
