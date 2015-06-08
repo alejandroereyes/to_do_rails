@@ -6,6 +6,10 @@
 $header-color: #B5C9D4;
 $nav-color: #FD7E47;
 $body-background-color: #C2C3BE;
+$link-color: #476C4D;
+
+// Font
+$font: Helvetica;
 
 body {
   background-color: $body-background-color;
@@ -15,7 +19,7 @@ header {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  font-family: Helvetica;
+  font-family: $font;
   height: 90px;
   background-color: $header-color;
   padding-top: 20px;
@@ -33,11 +37,11 @@ h3 {
 }
 
 h2 {
-    font-family: Helvetica;
+    font-family: $font;
   }
 
 p {
-  font-family: Helvetica;
+  font-family: $font;
 
   span.entry {
     margin-left: 20px;
@@ -49,11 +53,13 @@ p {
 }
 
 a {
-
+  color: $link-color;
+  font-family: $font;
+  text-decoration: none;
 }
 
 footer {
   text-align: center;
-  font-family: Helvetica;
+  font-family: $font;
   font-size: 15px;
 }
