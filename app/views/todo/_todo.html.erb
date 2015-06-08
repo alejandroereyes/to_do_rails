@@ -9,7 +9,7 @@
     <%= link_to "view", controller: "todo", action: "show", id: entry.id %>
     </span>
     <span class= "delete">
-    <%= button_to "delete", { action: "destroy", id: entry.id }, method: "delete" %>
+    <%= button_to "delete #{entry.id}", { action: "destroy", id: entry.id }, method: "delete" %>
     </span>
     </p>
     </li>
