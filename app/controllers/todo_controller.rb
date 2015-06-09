@@ -47,6 +47,6 @@ class TodoController < ApplicationController
   end # show
 
   def new
-    render 'new.html.erb', locals: { entry: params[:entry] }
+    render 'new.html.erb', locals: { entry: params[:entry], todo: Todo.new }
   end
 end # class
