@@ -1,18 +1,18 @@
 <ul>
-  <% todo.each do |entry| %>
+  <% todo.each do |todo| %>
     <li>
-    <p><span class="id"><%= entry.id %></span>
-    <span class= 'entry'><%= entry.entry %></span>
-    <% status = entry.completed ? "Completed" : "Unfinished" %>
+    <p><span class="id"><%= todo.id %></span>
+    <span class= 'entry'><%= todo.entry %></span>
+    <% status = todo.completed ? "Completed" : "Unfinished" %>
     <span class= 'status'><%= status %></span>
     <span class="view">
-    <%= link_to "View", controller: "todo", action: "show", id: entry.id %>
+    <%= link_to "View", controller: "todo", action: "show", id: todo.id %>
     </span>
     <span class="mark_todo">
-    <%= link_to "Mark as Completed", { action: "update", id: entry.id }, method: "put"  %>
+    <%= link_to "Mark as Completed", { action: "update", id: todo.id }, method: "put"  %>
     </span>
     <span class= "delete">
-    <%= button_to "Delete #{entry.id}", { action: "destroy", id: entry.id }, method: "delete" %>
+    <%= button_to "Delete #{todo.id}", { action: "destroy", id: todo.id }, method: "delete" %>
     </span>
     </p>
     </li>
