@@ -5,7 +5,8 @@ class TodoController < ApplicationController
   end # index
 
   def create
-      render json: Todo.create(entry: params[:entry]), status: 200
+    Todo.create(entry: params[:entry])
+    render 'index.html.erb', locals: { todo: Todo.all }
   end # create
 
   def update
@@ -46,6 +47,6 @@ class TodoController < ApplicationController
   end # show
 
   def new
-    render json: Todo.new, status: 200
+    render 'new.html.erb', locals: { entry: params[:entry] }
   end
 end # class

@@ -28,6 +28,10 @@ header {
 nav {
   height: 20px;
   background-color: $nav-color;
+
+  a.home {
+    margin-right: 20px;
+  }
 }
 
 h3 {

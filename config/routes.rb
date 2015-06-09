@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/todos/show', to: 'todo#show'
 
+  get 'todos/new', to: 'todo#new'
+
   get '/todos', to: 'todo#index'
 
   get '/todos/:id', to: 'todo#index'
