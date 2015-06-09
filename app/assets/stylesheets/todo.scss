@@ -26,10 +26,12 @@ header {
 }
 
 nav {
+  padding-top: 3px;
   height: 20px;
   background-color: $nav-color;
 
   a.home {
+    margin-left: 5px;
     margin-right: 20px;
   }
 }
@@ -84,6 +86,7 @@ div.text-box {
 
 footer {
   text-align: center;
+  margin-top: 20%;
   font-family: $font;
   font-size: 15px;
 }
