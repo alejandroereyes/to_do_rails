@@ -6,7 +6,10 @@
     <% status = entry.completed ? "Completed" : "Unfinished" %>
     <span class= 'status'><%= status %></span>
     <span class="view">
-    <%= link_to "view", controller: "todo", action: "show", id: entry.id %>
+    <%= link_to "View", controller: "todo", action: "show", id: entry.id %>
+    </span>
+    <span class="mark_todo">
+    <%= link_to "Mark as Completed", { action: "update", id: entry.id }, method: "put"  %>
     </span>
     <span class= "delete">
     <%= button_to "Delete #{entry.id}", { action: "destroy", id: entry.id }, method: "delete" %>

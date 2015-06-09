@@ -12,9 +12,9 @@ class TodoController < ApplicationController
     begin
       todo = Todo.find(params[:id])
       if !(params.has_key?(:entry))
-        todo.completed = params[:completed]
+        todo.completed = true
         todo.save
-        render json: Todo.find(params[:id]), status: 200
+        render 'index.html.erb', locals: { todo: Todo.all }
       elsif params.has_key?(:entry)
         todo = Todo.find(params[:id])
         todo.entry = params[:entry]
