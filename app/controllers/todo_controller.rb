@@ -5,8 +5,12 @@ class TodoController < ApplicationController
   end # index
 
   def create
-    Todo.create(entry: params[:entry])
-    render 'index.html.erb', locals: { todo: Todo.all }
+    if params.has_key?(:todo) && params[:todo][:entry] != nil && params[:todo][:entry] != ""
+      Todo.create(entry: params[:todo][:entry])
+      render 'index.html.erb', locals: { todo: Todo.all }
+    else
+      render json: { error: params }, status: 422
+    end
   end # create
 
   def update

@@ -2,7 +2,7 @@
   <%= render partial: 'search.html.erb' %>
 </header>
 <%= render partial: 'nav.html.erb' %>
-<%= form_for todo ,"http://localhost:3000/todos/create": { action: "create" }, html: { class: "entry_form"} do |t| %>
+<%= form_for todo ,"http://localhost:3000/todos": { action: "create" }, html: { class: "entry_form"} do |t| %>
   <div class="text-box"><%= t.text_area :entry, size: "60x12" %>
   <%= t.submit "New Todo" %></div>
 <% end %>
