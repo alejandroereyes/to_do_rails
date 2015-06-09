@@ -43,6 +43,10 @@ h2 {
 p {
   font-family: $font;
 
+  span.id {
+    font-weight: bold;
+  }
+
   span.entry {
     margin-left: 20px;
   }

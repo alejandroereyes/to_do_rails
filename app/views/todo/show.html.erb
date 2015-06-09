@@ -5,10 +5,13 @@
 <h3>Id#</h3><h3>Entry</h3><h3>Status</h3>
 <ul>
   <li>
-    <p><%= todo.id %>
+    <p><span class="id"><%= todo.id %></span>
     <span class="entry"><%= todo.entry %></span>
     <% status = todo.completed ? "Completed" : "Unfinished" %>
     <span class="status"><%= status %></span>
+    <span class= "delete">
+    <%= button_to "Delete this Todo", { action: "destroy", id: todo.id }, method: "delete" %>
+    </span>
     </p>
   </li>
 </ul>

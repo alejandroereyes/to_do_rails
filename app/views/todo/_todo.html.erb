@@ -1,7 +1,7 @@
 <ul>
   <% todo.each do |entry| %>
     <li>
-    <p><strong><%= entry.id %></strong>
+    <p><span class="id"><%= entry.id %></span>
     <span class= 'entry'><%= entry.entry %></span>
     <% status = entry.completed ? "Completed" : "Unfinished" %>
     <span class= 'status'><%= status %></span>
@@ -9,7 +9,7 @@
     <%= link_to "view", controller: "todo", action: "show", id: entry.id %>
     </span>
     <span class= "delete">
-    <%= button_to "delete #{entry.id}", { action: "destroy", id: entry.id }, method: "delete" %>
+    <%= button_to "Delete #{entry.id}", { action: "destroy", id: entry.id }, method: "delete" %>
     </span>
     </p>
     </li>
