@@ -9,6 +9,9 @@
     <span class="entry"><%= todo.entry %></span>
     <% status = todo.completed ? "Completed" : "Unfinished" %>
     <span class="status"><%= status %></span>
+    <span class="mark-todo">
+    <%= link_to "Mark as Completed", { action: "update", id: todo.id }, method: "put"  %>
+    </span>
     <span class= "delete">
     <%= button_to "Delete this Todo", { action: "destroy", id: todo.id }, method: "delete" %>
     </span>
